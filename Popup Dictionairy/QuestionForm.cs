@@ -14,7 +14,12 @@ namespace PopupDictionairy.App
             InitializeComponent();
 
             this.session = session;
-            this.ProcessAndDisplayTranslation();
+            this.Shown += QuestionForm_Shown;
+        }
+
+        private void QuestionForm_Shown(object sender, EventArgs e)
+        {
+            GetNextQuestion();
         }
 
         private void ProcessAndDisplayTranslation()
@@ -35,7 +40,10 @@ namespace PopupDictionairy.App
                     MessageBox.Show("You're Stupid!!!", "You answer was not correctly", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
 
+        private void GetNextQuestion()
+        {
             //Get next translation
             current = session.Next();
             txtAnswer.Text = String.Empty;
@@ -51,6 +59,7 @@ namespace PopupDictionairy.App
         private void buttonNext_Click(object sender, EventArgs e)
         {
             this.ProcessAndDisplayTranslation();
+            GetNextQuestion();
         }
     }
 }

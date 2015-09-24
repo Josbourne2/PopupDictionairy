@@ -1,6 +1,5 @@
 ﻿using PopupDictionairy.App.Model;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PopupDictionairy.App
@@ -14,12 +13,7 @@ namespace PopupDictionairy.App
         {
             InitializeComponent();
 
-            this.session = session; 
-            this.ProcessAndDisplayTranslation();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            this.session = session;
             this.ProcessAndDisplayTranslation();
         }
 
@@ -52,6 +46,11 @@ namespace PopupDictionairy.App
             }
 
             this.Close();
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            this.ProcessAndDisplayTranslation();
         }
     }
 }

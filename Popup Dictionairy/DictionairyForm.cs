@@ -103,5 +103,15 @@ namespace PopupDictionairy.App
             TranslationsForm tf = new TranslationsForm(controller);
             tf.Show();
         }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

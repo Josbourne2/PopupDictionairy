@@ -36,6 +36,8 @@
             this.manageTranslationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dictionaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verbsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonOk = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.manageTranslationsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(356, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,31 +72,57 @@
             this.dictionaryToolStripMenuItem,
             this.verbsToolStripMenuItem});
             this.manageTranslationsToolStripMenuItem.Name = "manageTranslationsToolStripMenuItem";
-            this.manageTranslationsToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
+            this.manageTranslationsToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
             this.manageTranslationsToolStripMenuItem.Text = "Manage Translations";
             // 
             // dictionaryToolStripMenuItem
             // 
             this.dictionaryToolStripMenuItem.Name = "dictionaryToolStripMenuItem";
-            this.dictionaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dictionaryToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.dictionaryToolStripMenuItem.Text = "Dictionary";
             this.dictionaryToolStripMenuItem.Click += new System.EventHandler(this.dictionaryToolStripMenuItem_Click);
             // 
             // verbsToolStripMenuItem
             // 
             this.verbsToolStripMenuItem.Name = "verbsToolStripMenuItem";
-            this.verbsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verbsToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.verbsToolStripMenuItem.Text = "Verbs";
+            // 
+            // buttonOk
+            // 
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOk.Location = new System.Drawing.Point(259, 33);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(75, 23);
+            this.buttonOk.TabIndex = 1;
+            this.buttonOk.Text = "Ok";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExit.Location = new System.Drawing.Point(12, 33);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // DictionairyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(356, 68);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(372, 107);
             this.Name = "DictionairyForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Popup Dictionairy";
             this.Resize += new System.EventHandler(this.DictionairyForm_Resize);
             this.menuStrip1.ResumeLayout(false);
@@ -112,6 +140,8 @@
         private System.Windows.Forms.ToolStripMenuItem manageTranslationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dictionaryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verbsToolStripMenuItem;
+        private System.Windows.Forms.Button buttonOk;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

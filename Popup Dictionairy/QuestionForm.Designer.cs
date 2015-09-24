@@ -67,11 +67,12 @@
             this.AcceptButton = this.buttonNext;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 92);
+            this.ClientSize = new System.Drawing.Size(428, 91);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.lblQuestion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MinimumSize = new System.Drawing.Size(444, 130);
             this.Name = "QuestionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuestionForm";

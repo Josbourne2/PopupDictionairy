@@ -38,6 +38,8 @@
             this.verbsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonOk = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.labelIntro = new System.Windows.Forms.Label();
+            this.buttonStart = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +93,7 @@
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Location = new System.Drawing.Point(259, 33);
+            this.buttonOk.Location = new System.Drawing.Point(269, 86);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 1;
@@ -102,7 +104,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.Location = new System.Drawing.Point(12, 33);
+            this.btnExit.Location = new System.Drawing.Point(17, 86);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 1;
@@ -110,19 +112,43 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // labelIntro
+            // 
+            this.labelIntro.AutoEllipsis = true;
+            this.labelIntro.Location = new System.Drawing.Point(14, 35);
+            this.labelIntro.Name = "labelIntro";
+            this.labelIntro.Size = new System.Drawing.Size(331, 39);
+            this.labelIntro.TabIndex = 2;
+            this.labelIntro.Text = "Press Ok to start your learning program. The application will automatically popup" +
+    " every {0} seconds.";
+            // 
+            // buttonStart
+            // 
+            this.buttonStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonStart.Location = new System.Drawing.Point(188, 86);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(75, 23);
+            this.buttonStart.TabIndex = 3;
+            this.buttonStart.Text = "Start";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
             // DictionairyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 68);
+            this.ClientSize = new System.Drawing.Size(356, 121);
+            this.Controls.Add(this.buttonStart);
+            this.Controls.Add(this.labelIntro);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(372, 107);
             this.Name = "DictionairyForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popup Dictionairy";
             this.Resize += new System.EventHandler(this.DictionairyForm_Resize);
             this.menuStrip1.ResumeLayout(false);
@@ -142,6 +168,8 @@
         private System.Windows.Forms.ToolStripMenuItem verbsToolStripMenuItem;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label labelIntro;
+        private System.Windows.Forms.Button buttonStart;
     }
 }
 

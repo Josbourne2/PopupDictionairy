@@ -6,7 +6,7 @@ namespace PopupDictionairy.App.Controller
 {
     public class TranslationsController
     {
-        private List<Translation> _internalCollection;
+        private List<TranslationQuestion> _internalCollection;
         private ITranslationsPersistenceProvider persistenceProvider;
         private bool initialized;
         private ITranslationQuestionSelector questionSelector;
@@ -22,7 +22,7 @@ namespace PopupDictionairy.App.Controller
             this.questionSelector = questionSelector;
         }
 
-        public List<Translation> Translations
+        public List<TranslationQuestion> Translations
         {
             get
             {
@@ -35,7 +35,7 @@ namespace PopupDictionairy.App.Controller
             }
         }
 
-        public IEnumerable<Translation> GetTranslationsForSession(int take)
+        public IEnumerable<TranslationQuestion> GetTranslationsForSession(int take)
         {
             return questionSelector.GetBatch(take, Translations);
         }

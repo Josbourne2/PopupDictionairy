@@ -45,14 +45,15 @@
             // 
             // pfTxtInterval
             // 
-            this.pfTxtInterval.Location = new System.Drawing.Point(187, 10);
+            this.pfTxtInterval.Location = new System.Drawing.Point(164, 10);
             this.pfTxtInterval.Name = "pfTxtInterval";
-            this.pfTxtInterval.Size = new System.Drawing.Size(100, 20);
+            this.pfTxtInterval.Size = new System.Drawing.Size(67, 20);
             this.pfTxtInterval.TabIndex = 1;
             // 
             // pfButtonOK
             // 
-            this.pfButtonOK.Location = new System.Drawing.Point(187, 216);
+            this.pfButtonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pfButtonOK.Location = new System.Drawing.Point(294, 57);
             this.pfButtonOK.Name = "pfButtonOK";
             this.pfButtonOK.Size = new System.Drawing.Size(75, 23);
             this.pfButtonOK.TabIndex = 2;
@@ -65,11 +66,13 @@
             this.AcceptButton = this.pfButtonOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 261);
+            this.ClientSize = new System.Drawing.Size(375, 86);
             this.Controls.Add(this.pfButtonOK);
             this.Controls.Add(this.pfTxtInterval);
             this.Controls.Add(this.pfLblInterval);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PreferencesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Preferences";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -5,26 +5,25 @@ namespace PopupDictionairy.App.Model
 {
     public class QuestionSession : IQuestionSession
     {
-        //private Translation[] questionList;
-        private Translation[] translations;
+        private IQuestion[] questions;
 
         private int size;
-        private int currentTranslationIndex;
+        private int currentQuestionIndex;
 
-        public QuestionSession(IEnumerable<Translation> translations)
+        public QuestionSession(IEnumerable<IQuestion> questions)
         {
-            this.translations = translations.ToArray();
-            size = translations.Count();
-            currentTranslationIndex = 0;
+            this.questions = questions.ToArray();
+            size = questions.Count();
+            currentQuestionIndex = 0;
         }
 
-        public Translation Next()
+        public IQuestion Next()
         {
-            if (currentTranslationIndex > translations.Count() - 1)
+            if (currentQuestionIndex > questions.Count() - 1)
                 return null;
 
-            var translation = translations[currentTranslationIndex];
-            currentTranslationIndex++;
+            var translation = questions[currentQuestionIndex];
+            currentQuestionIndex++;
             return translation;
         }
     }

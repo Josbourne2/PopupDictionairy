@@ -6,6 +6,6 @@ namespace PopupDictionairy.App.Controller
 {
     public interface ITranslationQuestionSelector
     {
-        IEnumerable<Translation> GetBatch(int take, IEnumerable<Translation> source);
+        IEnumerable<TranslationQuestion> GetBatch(int take, IEnumerable<TranslationQuestion> source);
     }
 }

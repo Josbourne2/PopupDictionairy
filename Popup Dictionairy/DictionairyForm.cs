@@ -25,8 +25,15 @@ namespace PopupDictionairy.App
             controller = new TranslationsController(persisteneProvider);
 
             notifyIcon1.BalloonTipClicked += notifyIcon1_BalloonTipClicked;
+
+            SetTexts();
+        }
+
+        private void SetTexts()
+        {
             notifyIcon1.BalloonTipTitle = "Popup Dictionairy";
             notifyIcon1.BalloonTipText = String.Format("The program will popup every {0} seconds. Click here if you want to change the interval.", (interval / 1000).ToString());
+            labelIntro.Text = String.Format("Press Ok to start your learning program. The application will automatically popup every {0} seconds.", (interval / 1000).ToString());
         }
 
         private void Current_QuestionIntervalChanged(object sender, int e)
@@ -34,7 +41,7 @@ namespace PopupDictionairy.App
             timer1.Stop();
             timer1.Interval = e;
             interval = e;
-            notifyIcon1.BalloonTipText = String.Format("The program will popup every {0} seconds. Click here if you want to change the interval.", (interval / 1000).ToString());
+            SetTexts();
             timer1.Start();
         }
 
@@ -92,7 +99,7 @@ namespace PopupDictionairy.App
                 QuestionSession session = new QuestionSession(controller.GetTranslationsForSession(2));
                 QuestionForm qf = new QuestionForm(session);
 
-                qf.FormClosed += (d, a) => { timer1.Start(); };
+                qf.FormClosed += (d, a) => { controller.Save(); timer1.Start(); };
                 qf.Show();
                 qf.Activate();
             }
@@ -112,6 +119,12 @@ namespace PopupDictionairy.App
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+            timer1_Tick(sender, e);
         }
     }
 }

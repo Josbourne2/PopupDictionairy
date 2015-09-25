@@ -26,18 +26,18 @@ namespace PopupDictionairy.App.Controller
             _filePath = Path.Combine(_userAppdataPath, _fileName);
         }
 
-        public void SaveTranslations(IEnumerable<Translation> translations)
+        public void SaveTranslations(IEnumerable<TranslationQuestion> translations)
         {
             Directory.CreateDirectory(_userAppdataPath);
             PersistenceHelper.Save(translations, _filePath);
         }
 
-        public IEnumerable<Translation> LoadTranslations()
+        public IEnumerable<TranslationQuestion> LoadTranslations()
         {
-            List<Translation> translations = new List<Translation>();
+            List<TranslationQuestion> translations = new List<TranslationQuestion>();
 
             string fileName = Path.Combine(_userAppdataPath, _filePath);
-            var data = PersistenceHelper.Load<List<Translation>>(fileName);
+            var data = PersistenceHelper.Load<List<TranslationQuestion>>(fileName);
             if (data != null)
             {
                 translations = data;

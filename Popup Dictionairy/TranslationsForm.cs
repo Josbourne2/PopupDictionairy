@@ -9,15 +9,16 @@ namespace PopupDictionairy.App
 {
     public partial class TranslationsForm : Form
     {
-        private BindingList<Translation> translationList;
+        private BindingList<TranslationQuestion> translationList;
         private TranslationsController controller;
 
         public TranslationsForm(TranslationsController controller)
         {
             InitializeComponent();
-
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoGenerateColumns = false;
             this.controller = controller;
-            translationList = new BindingList<Translation>(controller.Translations.ToList());
+            translationList = new BindingList<TranslationQuestion>(controller.Translations.ToList());
             this.dataGridView1.DataSource = translationList;
         }
 

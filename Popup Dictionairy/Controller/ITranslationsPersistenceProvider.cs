@@ -5,8 +5,8 @@ namespace PopupDictionairy.App.Controller
 {
     public interface ITranslationsPersistenceProvider
     {
-        IEnumerable<Translation> LoadTranslations();
+        IEnumerable<TranslationQuestion> LoadTranslations();
 
-        void SaveTranslations(IEnumerable<Translation> translations);
+        void SaveTranslations(IEnumerable<TranslationQuestion> translations);
     }
 }

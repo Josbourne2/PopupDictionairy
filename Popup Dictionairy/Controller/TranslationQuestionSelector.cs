@@ -7,9 +7,9 @@ namespace PopupDictionairy.App.Controller
 {
     internal class TranslationQuestionSelector : ITranslationQuestionSelector
     {
-        public IEnumerable<Translation> GetBatch(int take, IEnumerable<Translation> source)
+        public IEnumerable<TranslationQuestion> GetBatch(int take, IEnumerable<TranslationQuestion> source)
         {
-            List<Translation> choosenTranslations = new List<Translation>();
+            List<TranslationQuestion> choosenTranslations = new List<TranslationQuestion>();
 
             var allTranslations = (from translation in source
                                    where translation.CorrectAnswers < 3 //Ik werk dus met deze set, en deze set sla ik later op. De volgende keer dat ik een questionsession laad, worden degene die

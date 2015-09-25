@@ -12,3 +12,7 @@ D:\git\PopupDictionairy\Popup Dictionairy\obj\Debug\PopupDictionairy.App.Transla
 D:\git\PopupDictionairy\Popup Dictionairy\obj\Debug\Popup Dictionairy.csproj.GenerateResource.Cache
 D:\git\PopupDictionairy\Popup Dictionairy\obj\Debug\PopupDictionairy.App.exe
 D:\git\PopupDictionairy\Popup Dictionairy\obj\Debug\PopupDictionairy.App.pdb
+D:\git\PopupDictionairy\Popup Dictionairy\bin\Debug\PopupDictionairy.App.exe.manifest
+D:\git\PopupDictionairy\Popup Dictionairy\bin\Debug\PopupDictionairy.App.application
+D:\git\PopupDictionairy\Popup Dictionairy\obj\Debug\PopupDictionairy.App.exe.manifest
+D:\git\PopupDictionairy\Popup Dictionairy\obj\Debug\PopupDictionairy.App.application

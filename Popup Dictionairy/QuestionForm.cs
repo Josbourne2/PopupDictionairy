@@ -7,7 +7,7 @@ namespace PopupDictionairy.App
     public partial class QuestionForm : Form
     {
         private IQuestionSession session;
-        private Translation current;
+        private IQuestion currentQuestion;
 
         public QuestionForm(IQuestionSession session)
         {
@@ -24,20 +24,17 @@ namespace PopupDictionairy.App
 
         private void ProcessAndDisplayTranslation()
         {
-            //Process given translation
-            string givenAnswer = txtAnswer.Text;
-
-            if (!String.IsNullOrEmpty(givenAnswer))
+            if (HasAnswer)
             {
-                if (current.ToLanguage == givenAnswer)
+                if (currentQuestion.Validate(Answer))
                 {
-                    current.CorrectAnswers += 1;
-                    current.LastCorrectAnswer = DateTime.Now;
                     MessageBox.Show("You answered correctly!");
+                    GetNextQuestion();
                 }
                 else
                 {
                     MessageBox.Show("You're Stupid!!!", "You answer was not correctly", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    buttonSkip.Visible = true;
                 }
             }
         }
@@ -45,20 +42,29 @@ namespace PopupDictionairy.App
         private void GetNextQuestion()
         {
             //Get next translation
-            current = session.Next();
+            currentQuestion = session.Next();
             txtAnswer.Text = String.Empty;
-            if (current != null)
+            if (currentQuestion != null)
             {
-                lblQuestion.Text = current.FromLanguage;
+                lblQuestion.Text = currentQuestion.Question;
                 return;
             }
 
             this.Close();
         }
 
+        public bool HasAnswer { get { return Answer.Length > 0; } }
+
+        public string Answer { get { return txtAnswer.Text; } set { txtAnswer.Text = value; } }
+
         private void buttonNext_Click(object sender, EventArgs e)
         {
             this.ProcessAndDisplayTranslation();
+        }
+
+        private void buttonSkip_Click(object sender, EventArgs e)
+        {
+            buttonSkip.Visible = false;
             GetNextQuestion();
         }
     }

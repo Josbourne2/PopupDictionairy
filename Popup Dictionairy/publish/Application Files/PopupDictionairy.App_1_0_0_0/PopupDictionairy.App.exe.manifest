@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PopupDictionairy.App.exe" version="1.0.0.0" publicKeyToken="12e82eae24b8b66d" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PopupDictionairy.App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PopupDictionairy.App.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="520192">
+      <assemblyIdentity name="Newtonsoft.Json" version="7.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nsosXtGHteExnDWaq/g4KZITHv4YVLiZwjqT/iJ0luM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PopupDictionairy.App.exe" size="585728">
+      <assemblyIdentity name="PopupDictionairy.App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MPRCqe0NLfFiN7IWddlHrNuthCU85zFouPNVftZN43g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="PopupDictionairy.App.exe.config" size="1776">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>na7TSNdp/RzoS3+XBlRwUPkB2rTkWqozx17PGep4aIk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Gakuseisean-Ivista-2-Files-Font.ico" size="279740">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Kxhj2cbDQZFM60MVO9duOvyENPvMe9mQGJbRnN4wXeE=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-V0M286P\wouter" issuerKeyHash="6f703f78668c0e460b0d0408181e0c3bb5c1cb6f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>sYcVByapQqFvC5w/S2Pk/MkIZ232sx/OCNPxD0Xpu1s=</DigestValue></Reference></SignedInfo><SignatureValue>KDiYQuQBw1x//675G1kxSA5kTFNdCuafYs8dP4KeNR3288tnLVuGCDZuqbxvE80T8EQDepRI4IoNmYSWLt74jPKuMeZUwaXW3CA4lxdts/4t/eFCRBLpgEzbBkD7S/+RG4Mz4gjdJ3c8rCvVzK03w0J9vWpl/DjkdH5nblsCl7A=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>u8KI0c5Kp/rYlnwLVsMsyWoGANikxWfu+0QD1QCirgoRG1m45Ht1E1ApRrHuqjsuyggnmc/6zJVz8zsGZhe6oPwL/LdCaQcODB0ctnFp+/rxF/Ci2Hedd632MdbQKS/v7NHQyc/L/vley+OX3JfDbhvxO+r4FVVdaSFXobucHwE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="5bbbe9450ff1d308ce1fb3f66d6708c9fce4634b3f9c0b6fa142a926071587b1" Description="" Url=""><as:assemblyIdentity name="PopupDictionairy.App.exe" version="1.0.0.0" publicKeyToken="12e82eae24b8b66d" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-V0M286P\wouter</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>BHM0Ri2CgPVc9yuCyUdDwd/Nnjk2w65a4esu/VXN5HY=</DigestValue></Reference></SignedInfo><SignatureValue>HoYqyqZfjr2YHdLdrYwyctq78yJ8QHiiM3ZNFWYQdpVhDcUPnYoxxVk5+i+4ewYbRp5QXeFmzne1dp1W6PT6Eqvx+xgo/j5ovqD0ZF7JgeLCrZblNLv3rKphC2JYIij1cinx3jLYjN72YY5D5SYLzQ29eaBsbFRAojRq0MhGdps=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>u8KI0c5Kp/rYlnwLVsMsyWoGANikxWfu+0QD1QCirgoRG1m45Ht1E1ApRrHuqjsuyggnmc/6zJVz8zsGZhe6oPwL/LdCaQcODB0ctnFp+/rxF/Ci2Hedd632MdbQKS/v7NHQyc/L/vley+OX3JfDbhvxO+r4FVVdaSFXobucHwE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQThX0NqfMA4BJ4SAZDw7eUjANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtAFYAMABNADIAOAA2AFAAXAB3AG8AdQB0AGUAcjAeFw0xNTA5MjUxNjE4MDVaFw0xNjA5MjQyMjE4MDVaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0AVgAwAE0AMgA4ADYAUABcAHcAbwB1AHQAZQByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7wojRzkqn+tiWfAtWwyzJagYA2KTFZ+77RAPVAKKuChEbWbjke3UTUClGse6qOy7KCCeZz/rMlXPzOwZmF7qg/Av8t0JpBw4MHRy2cWn7+vEX8KLYd513rfYx1tApL+/s0dDJz8v++V7L45fcl8NuG/E76vgVVV1pIVehu5wfAQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAGZKstXvWSPxSZjMX/RWhN3TMhxUw4BxG1Cc8OdI7Cegg/n8H9j0XWvCfI1f6AU2ECKmXq5vzgR2YPTwa0y652zAwzaMwN4pQcus7AZt9Nj2gA/ZivAZDuJB1L6QLuZfcxJIEF8/rOXIJAuXQhilHwGD6NqqWQcW5Nr1SBd+Itnl</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

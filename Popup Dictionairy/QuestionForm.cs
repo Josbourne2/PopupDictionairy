@@ -28,6 +28,8 @@ namespace PopupDictionairy.App
             {
                 if (currentQuestion.Validate(Answer))
                 {
+                    currentQuestion.CorrectAnswers++;
+                    currentQuestion.LastCorrectAnswer = DateTime.Now;
                     MessageBox.Show("You answered correctly!");
                     GetNextQuestion();
                 }

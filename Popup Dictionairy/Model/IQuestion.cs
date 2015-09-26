@@ -34,10 +34,5 @@ namespace PopupDictionairy.App.Model
         /// <param name="userAnswer">The answer provided by the user.</param>
         /// <returns></returns>
         bool Validate(string userAnswer);
-
-        /// <summary>
-        /// If set to true, the question keeps track of correct answers on validation.
-        /// </summary>
-        bool SetStatisticsOnValidation { get; set; }
     }
 }

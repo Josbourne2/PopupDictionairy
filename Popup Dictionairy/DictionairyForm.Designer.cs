@@ -93,7 +93,7 @@
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Location = new System.Drawing.Point(269, 86);
+            this.buttonOk.Location = new System.Drawing.Point(269, 132);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 1;
@@ -104,7 +104,7 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.Location = new System.Drawing.Point(17, 86);
+            this.btnExit.Location = new System.Drawing.Point(17, 132);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 1;
@@ -115,9 +115,9 @@
             // labelIntro
             // 
             this.labelIntro.AutoEllipsis = true;
-            this.labelIntro.Location = new System.Drawing.Point(14, 35);
+            this.labelIntro.Location = new System.Drawing.Point(12, 47);
             this.labelIntro.Name = "labelIntro";
-            this.labelIntro.Size = new System.Drawing.Size(331, 39);
+            this.labelIntro.Size = new System.Drawing.Size(331, 34);
             this.labelIntro.TabIndex = 2;
             this.labelIntro.Text = "Press Ok to start your learning program. The application will automatically popup" +
     " every {0} seconds.";
@@ -125,7 +125,7 @@
             // buttonStart
             // 
             this.buttonStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStart.Location = new System.Drawing.Point(188, 86);
+            this.buttonStart.Location = new System.Drawing.Point(188, 132);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(75, 23);
             this.buttonStart.TabIndex = 3;
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 121);
+            this.ClientSize = new System.Drawing.Size(356, 167);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.labelIntro);
             this.Controls.Add(this.btnExit);

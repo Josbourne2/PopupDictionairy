@@ -34,13 +34,7 @@ namespace PopupDictionairy.App.Model
         public virtual bool Validate(string userAnswer)
         {
             bool result = string.Equals(Answer.Trim(), userAnswer.Trim(), StringComparison.CurrentCultureIgnoreCase);
-
-            if (result && SetStatisticsOnValidation)
-            {
-                lastCorrectAnswer = DateTime.Now;
-                correctAnswers++;
-            }
-
+           
             return result;
         }
 

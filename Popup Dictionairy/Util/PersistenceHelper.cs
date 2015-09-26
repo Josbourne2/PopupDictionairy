@@ -43,8 +43,7 @@ namespace PopupDictionairy.Util
 
         private static string Serialize(object data)
         {
-            JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects };
-            return JsonConvert.SerializeObject(data, settings);
+            return JsonConvert.SerializeObject(data);
         }
 
         private static T Deserialize<T>(string content)

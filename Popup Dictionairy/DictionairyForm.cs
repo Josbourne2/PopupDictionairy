@@ -89,9 +89,6 @@ namespace PopupDictionairy.App
             if (this.WindowState == FormWindowState.Minimized)
             {
                 timer1.Stop();
-                //this.WindowState = FormWindowState.Maximized;
-                //this.Show();
-                //this.Activate();
 
                 //TODO: QuestionsPerSession
                 //QuestionForm qf = new QuestionForm(controller.GetTranslationsForSession(SettingsManager.Current.QuestionPerSession);

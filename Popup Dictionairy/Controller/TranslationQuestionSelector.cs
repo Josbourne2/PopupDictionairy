@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace PopupDictionairy.App.Controller
 {
-    internal class TranslationQuestionSelector : ITranslationQuestionSelector
+    public class TranslationQuestionSelector : ITranslationQuestionSelector
     {
         public IEnumerable<TranslationQuestion> GetBatch(int take, IEnumerable<TranslationQuestion> source)
         {

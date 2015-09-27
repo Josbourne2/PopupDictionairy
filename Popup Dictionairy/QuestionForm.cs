@@ -14,6 +14,7 @@ namespace PopupDictionairy.App
             InitializeComponent();
 
             this.session = session;
+
             this.Shown += QuestionForm_Shown;
         }
 

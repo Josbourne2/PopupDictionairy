@@ -1,9 +1,0 @@
-D:\git\PopupDictionairy\Popup Dictionairy UT\bin\Debug\Popup Dictionairy UT.dll
-D:\git\PopupDictionairy\Popup Dictionairy UT\bin\Debug\Popup Dictionairy UT.pdb
-D:\git\PopupDictionairy\Popup Dictionairy UT\bin\Debug\PopupDictionairy.App.exe
-D:\git\PopupDictionairy\Popup Dictionairy UT\bin\Debug\Newtonsoft.Json.dll
-D:\git\PopupDictionairy\Popup Dictionairy UT\bin\Debug\PopupDictionairy.App.pdb
-D:\git\PopupDictionairy\Popup Dictionairy UT\bin\Debug\Newtonsoft.Json.xml
-D:\git\PopupDictionairy\Popup Dictionairy UT\obj\Debug\Popup Dictionairy UT.csprojResolveAssemblyReference.cache
-D:\git\PopupDictionairy\Popup Dictionairy UT\obj\Debug\Popup Dictionairy UT.dll
-D:\git\PopupDictionairy\Popup Dictionairy UT\obj\Debug\Popup Dictionairy UT.pdb

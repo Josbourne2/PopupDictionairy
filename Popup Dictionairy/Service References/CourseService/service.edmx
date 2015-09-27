@@ -1,0 +1,52 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="CourseDbModel" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Courses">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" MaxLength="50" FixedLength="false" Unicode="false" />
+        <Property Name="Description" Type="Edm.String" MaxLength="500" FixedLength="false" Unicode="false" />
+        <Property Name="Created" Type="Edm.DateTime" Precision="3" />
+        <Property Name="Started" Type="Edm.DateTime" Precision="3" />
+        <Property Name="LastAttended" Type="Edm.DateTime" Precision="3" />
+        <NavigationProperty Name="Questions" Relationship="CourseDbModel.fk_questions_course_id" ToRole="Questions" FromRole="Course" />
+      </EntityType>
+      <EntityType Name="Questions">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Question" Type="Edm.String" MaxLength="250" FixedLength="false" Unicode="false" />
+        <Property Name="Answer" Type="Edm.String" MaxLength="250" FixedLength="false" Unicode="false" />
+        <Property Name="CorrectAnswer" Type="Edm.Int32" />
+        <Property Name="LastCorrectAnswered" Type="Edm.DateTime" />
+        <Property Name="CourseId" Type="Edm.Int32" />
+        <NavigationProperty Name="Course" Relationship="CourseDbModel.fk_questions_course_id" ToRole="Course" FromRole="Questions" />
+      </EntityType>
+      <Association Name="fk_questions_course_id">
+        <End Type="CourseDbModel.Courses" Role="Course" Multiplicity="0..1" />
+        <End Type="CourseDbModel.Questions" Role="Questions" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Course">
+            <PropertyRef Name="Id" />
+          </Principal>
+          <Dependent Role="Questions">
+            <PropertyRef Name="CourseId" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="Popup.Dictionairy.OData" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="CourseDbEntities" m:IsDefaultEntityContainer="true" p6:LazyLoadingEnabled="true" xmlns:p6="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Courses" EntityType="CourseDbModel.Courses" />
+        <EntitySet Name="Questions" EntityType="CourseDbModel.Questions" />
+        <AssociationSet Name="fk_questions_course_id" Association="CourseDbModel.fk_questions_course_id">
+          <End Role="Course" EntitySet="Courses" />
+          <End Role="Questions" EntitySet="Questions" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

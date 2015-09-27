@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Popup Dictionairy", "Popup Dictionairy\Popup Dictionairy.csproj", "{04BC1045-99E6-4012-8F7A-E82E2991B456}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Popup Dictionairy UT", "Popup Dictionairy UT\Popup Dictionairy UT.csproj", "{6DDECC3F-D908-4188-88BC-F62D32CCAEB6}"
@@ -11,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{47565E
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Popup Dictionairy OData", "Popup Dictionairy OData\Popup Dictionairy OData.csproj", "{BE351CDE-65E4-457F-BDFB-D9AB34E57A79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +30,10 @@ Global
 		{6DDECC3F-D908-4188-88BC-F62D32CCAEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DDECC3F-D908-4188-88BC-F62D32CCAEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DDECC3F-D908-4188-88BC-F62D32CCAEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE351CDE-65E4-457F-BDFB-D9AB34E57A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE351CDE-65E4-457F-BDFB-D9AB34E57A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE351CDE-65E4-457F-BDFB-D9AB34E57A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE351CDE-65E4-457F-BDFB-D9AB34E57A79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

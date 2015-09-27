@@ -1,0 +1,73 @@
+﻿using System;
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Popup_Dictionairy_UT
+{
+    /// <summary>
+    /// Summary description for CourseServiceTest
+    /// </summary>
+    [TestClass]
+    public class CourseServiceTest
+    {
+        public CourseServiceTest()
+        {
+            
+        }
+
+        private TestContext testContextInstance;
+
+        /// <summary>
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
+        {
+            get
+            {
+                return testContextInstance;
+            }
+            set
+            {
+                testContextInstance = value;
+            }
+        }
+
+        #region Additional test attributes
+        //
+        // You can use the following additional attributes as you write your tests:
+        //
+        // Use ClassInitialize to run code before running the first test in the class
+        // [ClassInitialize()]
+        // public static void MyClassInitialize(TestContext testContext) { }
+        //
+        // Use ClassCleanup to run code after all tests in a class have run
+        // [ClassCleanup()]
+        // public static void MyClassCleanup() { }
+        //
+        // Use TestInitialize to run code before running each test 
+        // [TestInitialize()]
+        // public void MyTestInitialize() { }
+        //
+        // Use TestCleanup to run code after each test has run
+        // [TestCleanup()]
+        // public void MyTestCleanup() { }
+        //
+        #endregion
+
+        [TestMethod]
+        public void TestMethod1()
+        {
+            var service = new CourseService.CourseDbEntities(new Uri("http://localhost:14509/CourseDataService.svc"));
+
+            var courses = service.Courses.Where(a => a.Id > 0).First();
+
+            service.AddToQuestions(new CourseService.Questions { Question = "Who is", Answer = "I am", CourseId = 1 });
+            service.SaveChanges();
+            var result = service.Courses;
+          
+        }
+    }
+}

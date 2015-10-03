@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Popup_Dictionairy_UT.CourseService.CourseDbEntities.datasource" />
     <None Include="Service References\CourseService\service.edmx" />
   </ItemGroup>
   <ItemGroup>

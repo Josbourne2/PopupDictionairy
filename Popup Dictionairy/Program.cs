@@ -12,7 +12,7 @@ namespace PopupDictionairy.App
         private static void Main()
         {
 
-
+            //Git test JM 20160302
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DictionairyForm());

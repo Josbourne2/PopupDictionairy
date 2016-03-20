@@ -50,5 +50,7 @@ namespace PopupDictionairy.Util
         {
             return JsonConvert.DeserializeObject<T>(content);
         }
+
+        
     }
 }

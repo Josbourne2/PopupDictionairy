@@ -40,7 +40,7 @@ namespace PopupDictionairy.App.Controller
             var data = PersistenceHelper.Load<List<TranslationQuestion>>(fileName);
             if (data != null)
             {
-                translations = data;
+                translations = (List<TranslationQuestion>)data;
             }
 
             return translations;
